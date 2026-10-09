@@ -1,0 +1,6 @@
+target/
+.idea/
+*.class
+client_secrets.json
+client_secrets.json.json
+SmsSender.java

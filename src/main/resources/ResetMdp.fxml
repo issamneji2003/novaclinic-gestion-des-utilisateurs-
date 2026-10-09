@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<HBox prefWidth="800" prefHeight="480"
+      xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controllers.ResetMdpController"
+      stylesheets="@styles/inscription.css">
+
+    <!-- ===== LEFT BLUE PART ===== -->
+    <VBox prefWidth="320"
+          alignment="CENTER"
+          spacing="10"
+          styleClass="left-pane">
+
+        <Label text="NovaClinic" styleClass="app-name"/>
+        <Label text="Votre santé, notre mission"
+               styleClass="slogan"/>
+    </VBox>
+
+    <!-- ===== RIGHT WHITE PART ===== -->
+    <VBox prefWidth="480"
+          spacing="12"
+          styleClass="right-pane">
+
+        <padding>
+            <Insets top="30" right="40" bottom="30" left="40"/>
+        </padding>
+
+        <!-- TITLES -->
+        <Label fx:id="titleLabel"
+               text="Réinitialisation du mot de passe"
+               styleClass="title"/>
+
+        <Label fx:id="subtitleLabel"
+               text="Veuillez choisir un nouveau mot de passe"
+               styleClass="subtitle"/>
+
+        <!-- INPUTS (مدوّرين كيف inscription) -->
+        <PasswordField fx:id="passwordField"
+                       promptText="Nouveau mot de passe"
+                       styleClass="input"/>
+
+        <PasswordField fx:id="confirmPasswordField"
+                       promptText="Confirmer mot de passe"
+                       styleClass="input"/>
+
+        <TextField fx:id="tfEmail"
+                   promptText="Adresse email"
+                   styleClass="input"/>
+
+        <!-- MESSAGE -->
+        <Label fx:id="lblMessage"
+               style="-fx-text-fill:red;"/>
+
+        <!-- ACTION -->
+        <Button fx:id="btnReset"
+                text="Réinitialiser"
+                styleClass="btn-primary"
+                onAction="#resetPassword"/>
+
+        <!-- BACK LINK -->
+        <Hyperlink fx:id="linkBack"
+                   text="Retour à la connexion"
+                   styleClass="hyperlink"
+                   onAction="#backToLogin"/>
+
+    </VBox>
+</HBox>

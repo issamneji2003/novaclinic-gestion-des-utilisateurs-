@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.canvas.Canvas?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.StatisticsDashboard"
+            stylesheets="@admin.css">
+
+    <top>
+        <HBox styleClass="header" spacing="20" alignment="CENTER_LEFT">
+            <Label text="NovaClinic" styleClass="logo-text"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Label text="Statistics Dashboard" styleClass="header-subtitle"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Button text="⬅ Back"
+                    onAction="#goBack"
+                    styleClass="secondary-button"/>
+        </HBox>
+    </top>
+
+    <center>
+        <HBox spacing="40" alignment="CENTER" styleClass="content-area">
+
+            <!-- PatientS -->
+            <VBox styleClass="card" spacing="15" alignment="CENTER">
+                <Label text="Patients" styleClass="section-title"/>
+                <Canvas fx:id="canvasInvest" width="200" height="200"/>
+                <Label fx:id="lblInvest"
+                       styleClass="stat-number"/>
+            </VBox>
+
+            <!-- MedecinS -->
+            <VBox styleClass="card" spacing="15" alignment="CENTER">
+                <Label text="Medecins" styleClass="section-title"/>
+                <Canvas fx:id="canvasProp" width="200" height="200"/>
+                <Label fx:id="lblProp"
+                       styleClass="stat-number"/>
+            </VBox>
+
+        </HBox>
+    </center>
+
+</BorderPane>

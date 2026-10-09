@@ -1,0 +1,111 @@
+/* ================= ROOT ================= */
+.root {
+    -fx-background-color: #f6f9fc;
+}
+
+/* ================= HEADER ================= */
+.header {
+    -fx-background-color: linear-gradient(to right, #1d1d41, #2b2f77);
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    -fx-background-color: linear-gradient(to bottom, #1d1d41, #2b2f77);
+}
+
+/* ================= TEXT ================= */
+.logo-text,
+.header-subtitle,
+.nav-button,
+.sidebar-title {
+    -fx-text-fill: white;
+}
+
+.section-title {
+    -fx-text-fill: #1e3a8a;
+}
+
+.section-subtitle {
+    -fx-text-fill: #475569;
+}
+
+/* ================= CARDS ================= */
+.card {
+    -fx-background-color: white;
+}
+
+/* ================= INPUTS ================= */
+.text-field,
+.password-field {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: #6b7280;
+    -fx-border-color: #d1d5db;
+}
+
+/* ================= LIST VIEW ================= */
+.list-view {
+    -fx-background-color: transparent;
+}
+
+.list-cell {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+.list-cell:selected {
+    -fx-background-color: #eef3ff;
+}
+
+/* ================= BUTTONS ================= */
+.button {
+    -fx-background-color: #e5e7eb;
+    -fx-text-fill: black;
+}
+
+.button:hover {
+    -fx-background-color: #d1d5db;
+}
+
+.primary-button {
+    -fx-background-color: #4f8fe0;
+    -fx-text-fill: white;
+}
+
+.danger-button {
+    -fx-background-color: #ef4444;
+    -fx-text-fill: white;
+}
+
+/* ================= DARK TOGGLE ================= */
+.dark-toggle {
+    -fx-background-color: #444;
+    -fx-text-fill: white;
+}
+
+.dark-toggle:selected {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}.combo-box {
+     -fx-background-color: #2a2a2a;
+     -fx-text-fill: white;
+ }
+
+.combo-box-popup .list-cell {
+    -fx-background-color: #2a2a2a;
+    -fx-text-fill: white;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #3b3b3b;
+}/* ================= USER CARD (LIGHT) ================= */
+.user-card {
+    -fx-background-color: white;
+    -fx-padding: 10;
+    -fx-background-radius: 10;
+    -fx-border-color: #e5e7eb;
+}
+
+.user-card .label {
+    -fx-text-fill: #111111;
+}

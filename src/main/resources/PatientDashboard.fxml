@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.PatientDashboard"
+            stylesheets="@admin.css">
+
+    <!-- ================= HEADER ================= -->
+    <top>
+        <HBox styleClass="header"
+              alignment="CENTER_LEFT"
+              spacing="20"
+              prefHeight="70">
+
+            <!-- LOGO -->
+            <Label text="NovaClinic" styleClass="logo-text"/>
+            <Label text="Dashboard Patient" styleClass="header-subtitle"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+
+            <!-- 🌙 DARK MODE TOGGLE -->
+            <ToggleButton fx:id="darkToggle"
+                          text="OFF"
+                          onAction="#toggleTheme"
+                          styleClass="dark-toggle"/>
+
+        </HBox>
+    </top>
+
+    <!-- ================= SIDEBAR ================= -->
+    <left>
+        <VBox spacing="15" styleClass="sidebar">
+
+            <Label text="Navigation"
+                   styleClass="sidebar-title"/>
+
+            <Button fx:id="btnMyProfile"
+                    text="👤 My Profile"
+                    styleClass="nav-button"/>
+
+            <Button fx:id="btnViewProps"
+                    text="🏠 Medecins"
+                    styleClass="nav-button"/>
+
+            <Button fx:id="btnLogout"
+                    text="Logout"
+                    styleClass="danger-button"/>
+
+        </VBox>
+    </left>
+
+    <!-- ================= CONTENT ================= -->
+    <center>
+        <HBox spacing="30" styleClass="content-area">
+
+            <!-- ===== PROFILE CARD ===== -->
+            <VBox spacing="15"
+                  prefWidth="320"
+                  styleClass="card">
+
+                <Label text="My Profile"
+                       styleClass="section-title"/>
+
+                <TextField fx:id="tfCin" promptText="CIN"/>
+                <TextField fx:id="tfTel" promptText="Phone"/>
+                <TextField fx:id="tfNom" promptText="Last Name"/>
+                <TextField fx:id="tfPrenom" promptText="First Name"/>
+                <TextField fx:id="tfEmail" promptText="Email"/>
+
+                <Button fx:id="btnSaveProfile"
+                        text="Save Changes"
+                        styleClass="primary-button"/>
+
+            </VBox>
+
+            <!-- ===== MedecinS LIST ===== -->
+            <VBox spacing="15"
+                  prefWidth="760"
+                  styleClass="card">
+
+                <Label text="Medecins List"
+                       styleClass="section-title"/>
+
+                <ListView fx:id="lvMedecins"
+                          prefHeight="450"/>
+
+            </VBox>
+
+        </HBox>
+    </center>
+
+</BorderPane>

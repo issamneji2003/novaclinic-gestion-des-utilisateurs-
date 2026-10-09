@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controllers.FaceAuthController"
+      spacing="20"
+      alignment="CENTER"
+      prefWidth="500"
+      prefHeight="500"
+      style="-fx-background-color: white; -fx-padding: 30; -fx-border-color: #2c3e50; -fx-border-width: 2;">
+
+    <Label text="VÉRIFICATION FACIALE"
+           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+    <Label text="Veuillez regarder la caméra pour accéder au Dashboard"
+           style="-fx-font-size: 14px; -fx-text-fill: #7f8c8d;"/>
+
+    <StackPane style="-fx-border-color: #bdc3c7; -fx-border-width: 1; -fx-background-color: black;">
+        <ImageView fx:id="cameraView"
+                   fitWidth="400"
+                   fitHeight="300"
+                   preserveRatio="true" />
+    </StackPane>
+
+    <HBox spacing="15" alignment="CENTER">
+        <Button fx:id="btnVerify"
+                text="Scanner le visage"
+                onAction="#verifyFace"
+                style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-padding: 10 20; -fx-font-weight: bold; -fx-cursor: hand;"/>
+
+        <Button fx:id="btnCancel"
+                text="Annuler"
+                onAction="#closePopup"
+                style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-padding: 10 20; -fx-font-weight: bold; -fx-cursor: hand;"/>
+    </HBox>
+
+    <Label fx:id="statusLabel" text="Caméra prête..." style="-fx-text-fill: #34495e;"/>
+
+</VBox>

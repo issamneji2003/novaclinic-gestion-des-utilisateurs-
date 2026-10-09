@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.canvas.Canvas?>
+
+<BorderPane
+        xmlns="http://javafx.com/javafx/21"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="controllers.AdminDashboard"
+        stylesheets="@admin.css">
+
+    <!-- ================= HEADER ================= -->
+    <top>
+        <HBox prefHeight="70"
+              spacing="20"
+              alignment="CENTER_LEFT"
+              styleClass="header">
+
+            <Label text="NovaClinic" styleClass="logo-text"/>
+
+            <Pane HBox.hgrow="ALWAYS"/>
+
+            <Label text="Dashboard Admin" styleClass="header-subtitle"/>
+
+            <Pane HBox.hgrow="ALWAYS"/>
+
+            <ToggleButton fx:id="darkToggle"
+                          text="OFF"
+                          styleClass="dark-toggle"/>
+        </HBox>
+    </top>
+
+    <!-- ================= SIDEBAR ================= -->
+    <left>
+        <VBox spacing="15" styleClass="sidebar">
+            <Label text="Navigation" styleClass="sidebar-title"/>
+            <Button text="👥 Manage Users" styleClass="nav-button"/>
+            <Button fx:id="btnLogout"
+                    text="Logout"
+                    styleClass="danger-button"/>
+        </VBox>
+    </left>
+
+    <!-- ================= CONTENT ================= -->
+    <center>
+        <ScrollPane fitToWidth="true" pannable="true">
+            <content>
+                <VBox spacing="30" styleClass="content-area">
+
+                    <!-- ===== STATISTICS ===== -->
+                    <VBox spacing="20" styleClass="card">
+                        <Label text="Statistics" styleClass="section-title"/>
+
+                        <HBox spacing="60" alignment="CENTER">
+
+                            <VBox spacing="8" alignment="CENTER">
+                                <StackPane>
+                                    <Canvas fx:id="canvasInvest" width="120" height="120"/>
+                                    <Label fx:id="lblInvest" styleClass="section-title"/>
+                                </StackPane>
+                                <Label text="Patients" styleClass="section-subtitle"/>
+                            </VBox>
+
+                            <VBox spacing="8" alignment="CENTER">
+                                <StackPane>
+                                    <Canvas fx:id="canvasProp" width="120" height="120"/>
+                                    <Label fx:id="lblProp" styleClass="section-title"/>
+                                </StackPane>
+                                <Label text="Medecins" styleClass="section-subtitle"/>
+                            </VBox>
+
+                        </HBox>
+                    </VBox>
+
+                    <!-- ===== MAIN ===== -->
+                    <HBox spacing="30">
+
+                        <!-- USERS LIST -->
+                        <VBox prefWidth="520" spacing="15" styleClass="card">
+                            <Label text="Users" styleClass="section-title"/>
+
+                            <TextField fx:id="tfSearch"
+                                       promptText="Search by email"/>
+
+
+                            <ComboBox fx:id="cbFilterRole"
+                                      promptText="Filter by role"/>
+
+                            <ListView fx:id="lvUsers"
+                                      prefHeight="360"/>
+
+                            <HBox spacing="10">
+                                <Button fx:id="btnRefresh"
+                                        text="Refresh"
+                                        styleClass="secondary-button"/>
+
+                                <Button text="🔤 Trier par Nom (A-Z)"
+                                        onAction="#sortByNom"
+                                        styleClass="primary-button"/>
+
+                                <Button text="📄 Export PDF"
+                                        onAction="#exportPdf"
+                                        styleClass="primary-button"/>
+
+                                <Button fx:id="btnRegisterFace"
+                                        text="📸 Register My Face"
+                                        onAction="#handleRegisterFace"
+                                        styleClass="primary-button" />
+
+                            </HBox>
+                        </VBox>
+
+                        <!-- USER DETAILS -->
+                        <VBox prefWidth="300" spacing="12" styleClass="card">
+                            <Label text="User Details" styleClass="section-title"/>
+
+                            <TextField fx:id="tfCin" promptText="CIN"/>
+                            <TextField fx:id="tfTel" promptText="Phone"/>
+                            <TextField fx:id="tfNom" promptText="Last Name"/>
+                            <TextField fx:id="tfPrenom" promptText="First Name"/>
+                            <TextField fx:id="tfEmail" promptText="Email"/>
+
+                            <ComboBox fx:id="cbRole" promptText="Role"/>
+
+                            <HBox spacing="10">
+                                <Button fx:id="btnAdd"
+                                        text="Add"
+                                        styleClass="primary-button"/>
+
+                                <Button fx:id="btnUpdate"
+                                        text="Update"
+                                        styleClass="secondary-button"/>
+                            </HBox>
+
+                            <Button fx:id="btnDelete"
+                                    text="Delete"
+                                    styleClass="danger-button"/>
+
+                            <!-- 🔒 BLOCK / UNBLOCK -->
+                            <HBox spacing="10">
+                                <Button text="Block User"
+                                        onAction="#blockUser"
+                                        styleClass="danger-button"/>
+
+                                <Button text="Unblock User"
+                                        onAction="#unblockUser"
+                                        styleClass="primary-button"/>
+                            </HBox>
+
+                            <PasswordField fx:id="tfPassword"
+                                           promptText="Password"/>
+
+                            <Button fx:id="btnChangePass"
+                                    text="Change Password"
+                                    styleClass="secondary-button"/>
+                        </VBox>
+
+                    </HBox>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

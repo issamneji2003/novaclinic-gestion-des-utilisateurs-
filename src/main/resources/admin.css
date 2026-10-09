@@ -1,0 +1,181 @@
+/* ================= ROOT ================= */
+.root {
+    -fx-font-family: "Times New Roman";
+}
+
+/* ================= HEADER ================= */
+.header {
+    -fx-padding: 20;
+}
+
+/* LOGO */
+.logo-text {
+    -fx-font-size: 26px;
+    -fx-font-weight: 800;
+    -fx-letter-spacing: 1px;
+}
+
+/* DASHBOARD TITLE */
+.header-subtitle {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-opacity: 0.95;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    -fx-padding: 20;
+    -fx-pref-width: 220;
+}
+
+.sidebar-title {
+    -fx-font-size: 13px;
+}
+
+/* ================= NAV BUTTONS ================= */
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12;
+    -fx-background-radius: 10;
+}
+
+.nav-button:hover {
+    -fx-background-color: rgba(255,255,255,0.15);
+}
+
+/* ================= CONTENT ================= */
+.content-area {
+    -fx-padding: 35;
+}
+
+/* ================= CARD ================= */
+.card {
+    -fx-padding: 22;
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+    -fx-effect: dropshadow(
+            three-pass-box,
+            rgba(0,0,0,0.06),
+            14, 0, 0, 6
+    );
+}
+
+/* ================= TITLES ================= */
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.section-subtitle {
+    -fx-font-size: 14px;
+}
+
+/* ================= INPUTS ================= */
+.text-field,
+.password-field,
+.combo-box {
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-padding: 10 14;
+}
+
+.text-field:focused,
+.password-field:focused,
+.combo-box:focused {
+    -fx-border-color: #6aa9f7;
+}
+
+/* ================= BUTTONS ================= */
+.primary-button {
+    -fx-background-radius: 12;
+    -fx-font-weight: bold;
+}
+
+.secondary-button {
+    -fx-background-radius: 12;
+}
+
+.danger-button {
+    -fx-background-radius: 12;
+}
+
+/* ================= LISTVIEW ================= */
+.list-view {
+    -fx-background-color: transparent;
+}
+
+.list-cell {
+    -fx-padding: 16;
+    -fx-background-radius: 14;
+    -fx-border-radius: 14;
+    -fx-effect: dropshadow(
+            three-pass-box,
+            rgba(0,0,0,0.05),
+            8, 0, 0, 4
+    );
+}
+
+/* ================= STATISTICS ================= */
+.stat-number {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+/* ================= DARK MODE TOGGLE ================= */
+.dark-toggle {
+    -fx-background-radius: 20;
+    -fx-font-weight: bold;
+    -fx-padding: 6 14 6 14;
+    -fx-pref-width: 120;
+    -fx-alignment: CENTER_LEFT;
+}
+/* ================= SIDEBAR FIX ================= */
+
+.sidebar .nav-button {
+    -fx-text-fill: white;
+}
+
+.sidebar .nav-button:hover {
+    -fx-text-fill: white;
+}
+
+.sidebar .label {
+    -fx-text-fill: white;
+}
+.whatsapp-button {
+    -fx-background-color: #25D366;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 18;
+}
+
+.whatsapp-button:hover {
+    -fx-background-color: #1ebe5d;
+}
+/* ================= WHATSAPP BUTTON (ALWAYS GREEN) ================= */
+
+.whatsapp-button {
+    -fx-background-color: #25D366 !important; /* WhatsApp green */
+    -fx-text-fill: white !important;
+    -fx-font-weight: bold;
+    -fx-background-radius: 18;
+    -fx-padding: 6 16;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 8, 0, 0, 2);
+}
+
+
+.whatsapp-button:hover {
+    -fx-background-color: #1ebe5d !important;
+}
+
+.whatsapp-button:pressed {
+    -fx-background-color: #1aa34a !important;
+}
+
+/* حتى في DARK MODE */
+.dark .whatsapp-button {
+    -fx-background-color: #25D366 !important;
+    -fx-text-fill: white !important;
+}

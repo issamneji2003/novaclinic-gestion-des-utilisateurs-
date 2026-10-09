@@ -1,0 +1,221 @@
+/* ============================= */
+/* GLOBAL BASE */
+/* ============================= */
+
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-background-color: #f4f6f9;
+}
+
+/* ============================= */
+/* PRIMARY BUTTON (ADD / SAVE) */
+/* ============================= */
+
+.primary-button {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-padding: 8 18;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    -fx-background-color: #1d4ed8;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.primary-button:pressed {
+    -fx-background-color: #1e40af;
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+
+/* ============================= */
+/* UPDATE BUTTON */
+/* ============================= */
+
+.update-button {
+    -fx-background-color: #10b981;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-padding: 8 18;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.update-button:hover {
+    -fx-background-color: #059669;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.update-button:pressed {
+    -fx-background-color: #047857;
+}
+
+
+/* ============================= */
+/* DELETE BUTTON */
+/* ============================= */
+
+.danger-button {
+    -fx-background-color: #ef4444;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-padding: 8 18;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.danger-button:hover {
+    -fx-background-color: #dc2626;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.danger-button:pressed {
+    -fx-background-color: #991b1b;
+}
+
+
+/* ============================= */
+/* REFRESH BUTTON */
+/* ============================= */
+
+.refresh-button {
+    -fx-background-color: #e5e7eb;
+    -fx-text-fill: #111827;
+    -fx-background-radius: 10;
+    -fx-padding: 6 14;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.refresh-button:hover {
+    -fx-background-color: #d1d5db;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.refresh-button:pressed {
+    -fx-background-color: #9ca3af;
+}
+
+
+/* ============================= */
+/* MINI BUTTON (Check Info / Voir Offres) */
+/* ============================= */
+
+.mini-button {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-font-size: 11px;
+    -fx-padding: 4 10;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+}
+
+.mini-button:hover {
+    -fx-background-color: #1d4ed8;
+    -fx-scale-x: 1.08;
+    -fx-scale-y: 1.08;
+}
+
+
+/* ============================= */
+/* LOGOUT BUTTON */
+/* ============================= */
+
+.logout-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.logout-button:hover {
+    -fx-text-fill: #ef4444;
+}
+
+
+/* ============================= */
+/* COMBOBOX STYLE */
+/* ============================= */
+
+.combo-box {
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #d1d5db;
+    -fx-background-color: white;
+    -fx-padding: 5;
+}
+
+.combo-box:hover {
+    -fx-border-color: #2563eb;
+}
+
+.combo-box:focused {
+    -fx-border-color: #2563eb;
+    -fx-effect: dropshadow(three-pass-box, rgba(37,99,235,0.4), 10, 0, 0, 0);
+}
+
+.combo-box .list-cell {
+    -fx-padding: 6 10;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-radius: 10;
+}
+
+
+/* ============================= */
+/* TEXTFIELD / PASSWORDFIELD */
+/* ============================= */
+
+.text-field,
+.password-field {
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #d1d5db;
+    -fx-background-color: white;
+    -fx-padding: 8;
+}
+
+.text-field:focused,
+.password-field:focused {
+    -fx-border-color: #2563eb;
+    -fx-effect: dropshadow(three-pass-box, rgba(37,99,235,0.4), 10, 0, 0, 0);
+}
+
+
+/* ============================= */
+/* LISTVIEW STYLE */
+/* ============================= */
+
+.list-view {
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #e5e7eb;
+}
+
+.list-cell {
+    -fx-padding: 10;
+}
+
+.list-cell:hover {
+    -fx-background-color: #f3f4f6;
+}
+
+.list-cell:selected {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+}
+/* ===== SAME STYLE AS USERS / DETAILS ===== */
+.section-subtitle {
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 14px;
+    -fx-text-fill: #475569;
+}

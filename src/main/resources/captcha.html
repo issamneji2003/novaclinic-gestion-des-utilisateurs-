@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        function onSuccess(token) {
+            window.java.onCaptchaSuccess(token);
+        }
+    </script>
+</head>
+<body style="margin:0;padding:0;display:flex;justify-content:center;">
+<div class="g-recaptcha"
+     data-sitekey="SITE_KEY_MTE3EK"
+     data-callback="onSuccess">
+</div>
+</body>
+</html>

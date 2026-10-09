@@ -1,0 +1,152 @@
+/* ================= ROOT ================= */
+.root {
+    -fx-background-color: #121212;
+}
+
+/* ================= HEADER ================= */
+.header {
+    -fx-background-color: linear-gradient(to right, #1d1d41, #2b2f77);
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    -fx-background-color: linear-gradient(to bottom, #1d1d41, #2b2f77);
+}
+
+/* ================= TEXT ================= */
+.logo-text,
+.header-subtitle,
+.nav-button,
+.sidebar-title {
+    -fx-text-fill: white;
+}
+
+.section-title {
+    -fx-text-fill: white;
+}
+
+.section-subtitle {
+    -fx-text-fill: #cbd5f5;
+}
+
+/* ================= CARDS ================= */
+.card {
+    -fx-background-color: #1f1f1f;
+}
+
+/* ================= INPUTS ================= */
+.text-field,
+.password-field {
+    -fx-background-color: #2b2b2b;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #9ca3af;
+    -fx-border-color: #444;
+}
+
+/* ================= LIST VIEW ================= */
+.list-view {
+    -fx-background-color: transparent;
+}
+
+.list-cell {
+    -fx-background-color: #1f1f1f;
+    -fx-text-fill: white;
+}
+
+.list-cell:selected {
+    -fx-background-color: #2f2f2f;
+}
+
+/* ================= BUTTONS ================= */
+.button {
+    -fx-background-color: #3a3a3a;
+    -fx-text-fill: white;
+}
+
+.button:hover {
+    -fx-background-color: #4a4a4a;
+}
+
+.primary-button {
+    -fx-background-color: #4f8fe0;
+    -fx-text-fill: white;
+}
+
+.danger-button {
+    -fx-background-color: #ef4444;
+    -fx-text-fill: white;
+}
+
+/* ================= DARK TOGGLE ================= */
+.dark-toggle {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+.dark-toggle:selected {
+    -fx-background-color: #444;
+    -fx-text-fill: white;
+}
+/* ================= HEADER TEXT FIX ================= */
+.logo-text {
+    -fx-text-fill: white;
+    -fx-font-size: 26px;
+    -fx-font-weight: 800;
+}
+
+.header-subtitle {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+/* ================= LIST CELL TEXT FIX ================= */
+
+.list-cell Label {
+    -fx-text-fill: white;
+}
+
+.list-cell .button {
+    -fx-background-color: #3a3a3a;
+    -fx-text-fill: white;
+}
+
+.list-cell .button:hover {
+    -fx-background-color: #4a4a4a;
+}
+/* ================= SIDEBAR FIX ================= */
+
+.sidebar .nav-button {
+    -fx-text-fill: white;
+}
+
+.sidebar .nav-button:hover {
+    -fx-text-fill: white;
+}
+
+.sidebar .label {
+    -fx-text-fill: white;
+}
+.list-view {
+    -fx-background-color: transparent;
+}
+
+.list-cell {
+    -fx-background-color: #2a2a2a;
+    -fx-text-fill: white;
+    -fx-background-radius: 12;
+    -fx-padding: 12;
+}
+
+.list-cell:selected {
+    -fx-background-color: #3b3b3b;
+}/* ================= USER CARD (DARK) ================= */
+.user-card {
+    -fx-background-color: #1f1f1f;
+    -fx-padding: 10;
+    -fx-background-radius: 10;
+    -fx-border-color: #3a3a3a;
+}
+
+.user-card .label {
+    -fx-text-fill: white;
+}

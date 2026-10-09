@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<HBox prefWidth="800" prefHeight="480"
+      xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controllers.InscriptionController"
+      stylesheets="@styles/inscription.css">
+
+   <!-- ===== LEFT BLUE PART ===== -->
+   <VBox prefWidth="320"
+         alignment="CENTER"
+         spacing="10"
+         styleClass="left-pane">
+
+      <Label text="NovaClinic" styleClass="app-name"/>
+      <Label text="Votre santé, notre mission"
+             styleClass="slogan"/>
+   </VBox>
+
+   <!-- ===== RIGHT WHITE PART ===== -->
+   <VBox prefWidth="480"
+         spacing="12"
+         styleClass="right-pane">
+
+      <padding>
+         <Insets top="30" right="40" bottom="30" left="40"/>
+      </padding>
+
+      <!-- 🌍 TRANSLATION BUTTON -->
+      <MenuButton fx:id="btnLang"
+                  text="🌍 Traduction"
+                  styleClass="lang-button">
+         <items>
+            <MenuItem text="🇫🇷 Français" onAction="#setFrench"/>
+            <MenuItem text="🇬🇧 English" onAction="#setEnglish"/>
+            <MenuItem text="🇹🇳 العربية" onAction="#setArabic"/>
+         </items>
+      </MenuButton>
+
+      <!-- TITLES -->
+      <Label fx:id="titleLabel" styleClass="title"/>
+      <Label fx:id="subtitleLabel" styleClass="subtitle"/>
+
+      <!-- INPUTS -->
+      <TextField fx:id="tfcin" styleClass="input"/>
+      <TextField fx:id="tfnum_tel" styleClass="input"/>
+      <TextField fx:id="tfnom" styleClass="input"/>
+      <TextField fx:id="tfprenom" styleClass="input"/>
+      <TextField fx:id="tfemail" styleClass="input"/>
+
+      <PasswordField fx:id="tfmdp" styleClass="input"/>
+      <TextField fx:id="tfshowpassword" styleClass="input"/>
+
+      <CheckBox fx:id="show"/>
+
+      <!-- ROLES -->
+      <HBox spacing="15">
+         <RadioButton fx:id="rbPatient"/>
+         <RadioButton fx:id="rbMedecin"/>
+      </HBox>
+
+      <!-- ACTIONS -->
+      <Button fx:id="btn_inscri"
+              styleClass="btn-primary"
+              onAction="#savePerson"/>
+
+      <Hyperlink fx:id="hyperlink"
+                 styleClass="hyperlink"
+                 onAction="#redirectToAuthPage"/>
+   </VBox>
+
+</HBox>
